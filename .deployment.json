@@ -5,7 +5,7 @@
     },
     "containers": [
         {
-            "dir": "/",
+            "dir": "",
             "envVars": []
         }
     ]
