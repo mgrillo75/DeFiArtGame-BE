@@ -7,7 +7,7 @@ from flask_marshmallow import Marshmallow
 from flask_cors import CORS, cross_origin
 from logging import *
 
-port = int(os.environ.get("PORT", 5000))
+port = int(os.environ.get("PORT", 3001))
 
 app = Flask(__name__)
 

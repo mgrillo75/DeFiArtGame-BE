@@ -1,0 +1,12 @@
+{
+    "env": {
+        "name": "defi-be",
+        "branch": "main"
+    },
+    "containers": [
+        {
+            "dir": "/",
+            "envVars": []
+        }
+    ]
+}
