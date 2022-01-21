@@ -1,4 +1,5 @@
 {
+
   "name": "defiartgame-be",
   "scripts": {
     "build": "yarn prisma generate && tsc",
