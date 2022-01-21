@@ -1,0 +1,1 @@
+export type RouteMethods = 'GET' | 'POST';

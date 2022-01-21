@@ -1,0 +1,36 @@
+{
+  "name": "defiartgame-be",
+  "scripts": {
+    "build": "yarn prisma generate && tsc",
+    "migrate": "yarn prisma db push",
+    "start": "node dist/index.js",
+    "watch": "tsc --watch"
+  },
+  "version": "1.0.0",
+  "description": "Backend for DefiArtgame",
+  "main": "dist/index.js",
+  "repository": "https://github.com/mgrillo75/DeFiArtGame-BE",
+  "author": "Amitoj Singh <amitojsingh366@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/glob": "^7.2.0",
+    "@types/node": "^17.0.10",
+    "prisma": "^3.8.1",
+    "typescript": "^4.5.5"
+  },
+  "prisma": {
+    "schema": "./src/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@discordjs/collection": "^0.4.0",
+    "@prisma/client": "^3.8.1",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "glob": "^7.2.0"
+  }
+}
