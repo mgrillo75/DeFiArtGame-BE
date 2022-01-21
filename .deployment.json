@@ -6,7 +6,16 @@
     "containers": [
         {
             "dir": "/",
-            "envVars": []
+            "envVars": [
+                {
+                    "name": "DATABASE_URL",
+                    "secret": "DATABASE_URL"
+                },
+                {
+                    "name": "HTTP_PORT",
+                    "secret": "HTTP_PORT"
+                }
+            ]
         }
     ]
 }

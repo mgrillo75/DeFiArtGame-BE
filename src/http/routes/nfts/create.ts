@@ -14,7 +14,6 @@ route.setExecutor(async (server, request, response) => {
             yield: request.body.yield,
         }
     }).then(async (nft) => {
-        console.log(nft);
         await database.nftReference.create({
             data: {
                 nftId: nft.id,
@@ -22,10 +21,8 @@ route.setExecutor(async (server, request, response) => {
                 contractAddress: request.body.contractAddress
             }
         });
-
         return route.reply(response, 'Created');
     })
-
 })
 
 export default route;

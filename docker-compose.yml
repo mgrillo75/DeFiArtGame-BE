@@ -1,0 +1,22 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:13-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: defiartgame
+      POSTGRES_PASSWORD: backend
+      POSTGRES_DB: defiartgame
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.docker/postgres:/var/lib/postgresql/_data
+  defiartgame-backend:
+    build: ./
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://defiartgame:backend@postgres/defiartgame
+    ports:
+      - 3001:3001
+    depends_on:
+      - postgres

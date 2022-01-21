@@ -8,7 +8,7 @@ const route = new RouteExecutor({
 
 
 route.setExecutor(async (server, request, response) => {
-    const nfts = await database.nft.findMany();
+    const nfts = await database.nft.findMany({ include: { reference: true } });
     route.reply(response, nfts);
 })
 

@@ -16,4 +16,5 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           deployment-url: ${{ secrets.DEPLOY_URL }}
           deployment-secret: ${{ secrets.DEPLOY_SECRET }}
-          
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          HTTP_PORT: ${{ secrets.HTTP_PORT }}
